@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>The Story - responsive landing page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twitter bootstrap theme">
+    <meta name="author" content="prettystrap">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <!-- Le styles -->
+    <link href="assets/less/style.min.css" rel="stylesheet"> 
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    <!-- Le fav  -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+
+    <!-- Main js fail. -->
+    <script src="assets/js/main.min.js"></script>
+
+    <script>
+        // History, and back button
+
+    $(function() {
+    jQuery.history.listen()
+      $('#nav .nav .scroll').click(function() {
+      $.history.push('index.html' + $(this).attr('href')); 
+      });
+    });
+    </script>
+  </head>
+
+  <!-- activate scrollspy -->
+  <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+       <!-- Nav button -->
+      <a id="toggle"  class="closed">
+        <i class="icon-reorder"></i>
+      </a>
+
+      <!-- Navigation -->
+      <header class="navbar navbar-fixed-top">
+        <div class="inner-page">
+          <h1 class="logo">Node Framework<small>(s)</small></h1>
+            <div id="nav">
+              <ul class="nav">
+                <li class="active"><a title="Home page" class="scroll brand-1" href="index.html#home">Home</a></li>
+                <li><a title="Check out our awesome services" href="#mvc" class=" scroll brand-4">MVC</a></li>
+                <li><a title="Who we are" href="#full-stack" class="scroll fadeto brand-4">Full-stack</a></li>
+                <li><a title="Themes assets" href="#rest-api" class="scroll brand-3">REST API</a></li>                
+                <li><a title="Who we are" href="#others" class="scroll fadeto brand-4">Others</a></li>
+                <!-- <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li> -->
+              </ul>
+            </div>
+        </div> 
+      </header>
+      <!-- Home Page -->
+      <div id="home" class="page color-1">
+        <div class="inner-page">
+          <h2 class="page-headline large">Hand-picked registry of Node.js frameworks.</h2>
+        </div>  
+        <div class="row-fluid inner-page">
+          <div class="span8 pull-right lazy-container">
+            <img class="lazy" alt="Looks great on every device" src="assets/img/nodejs-black.png" data-original="assets/img/nodejs-black.png"/>
+          </div>
+          <div class="span4 pull-right">
+            <ul class="big-list">
+              <li><i class="icon-ok"></i>MVC</li>              
+              <li><i class="icon-cloud"></i>Full-stack</li>
+              <li><i class="icon-wrench"></i>REST API</li>
+              <li><i class="icon-cog"></i>Others</li>
+            </ul>
+            <br />
+            <a href="#mvc" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
+            <!-- <br/>
+            <a href="sample-page.html#" class="btn btn-centered" title="Check out more features"> <i class="icon-github"></i> View on GitHub</a> -->
+          </div>
+        </div>
+      </div>
+      <div id="mvc" class="page color-4">
+        <div class="inner-page">
+          <h2 class="page-headline">MVC frameworks</h2>
+        </div>
+                         
+        <div class="row-fluid inner-page">
+          <div class="span6">           
+            <h3>Sinatra-like</h3>
+            <p class="lead">These frameworks offer rich configuration and are less opinionated than Rails-like or full-stack.</p>
+            <ul class="list-wide">
+              <li><i class="icon-check"></i> <a href="http://expressjs.com/">Express</a></li>
+              <li><i class="icon-check"></i> <a href="http://spumko.github.io/">hapi</a></li>
+              <li><i class="icon-check"></i> <a href="http://flatironjs.org/">flatiron</a></li>
+            </ul>         
+          </div>
+          <div class="span6">           
+            <h3>Rails-like</h3>
+            <p class="lead">Present your project properly. Create your own art from included templates</p>
+            <ul class="list-wide">
+              <li><i class="icon-check"></i> <a href="http://compoundjs.com/">CompoundJS</a> (former railswayjs)</li>
+              <li><i class="icon-check"></i> <a href="http://geddyjs.org/">geddy</a></li>
+              <li><i class="icon-check"></i> <a href="http://sailsjs.org/">Sails.js</a></li>
+            </ul>         
+          </div>
+        </div>        
+      </div> 
+      <hr/>        
+      <div id="full-stack" class="page color-4">
+          <div class="inner-page">
+            <h2 class="page-headline">Full-stack</h2>
+          </div>
+        <div class="row-fluid inner-page">
+          <div class="span12">
+            <p class="lead">That's where Node.js really shine. The full-stack MVC frameworks are bundled with scaffolding, template engines, websocket and persistence libraries to allow you build real-time scalable web apps.</p>
+            <ul class="list-wide">
+              <li><i class="icon-check"></i> <a href="http://derbyjs.com">Derby</a></li>
+              <li><i class="icon-check"></i> <a href="http://meteor.com/">Meteor</a></li>
+            </ul> 
+        </div>
+      </div> 
+
+      <hr/>
+
+      <div id="rest-api" class="page color-4">
+          <div class="inner-page">
+            <h2 class="page-headline">REST API</h2>
+          </div>
+        <div class="row-fluid inner-page">
+          <div class="span12">
+            <p class="lead">For those who use rich-client/front-end MVC frameworks (or not) and just need to spin up a fast Node.js REST API server.</p>
+            <ul class="list-wide">
+              <li><i class="icon-check"></i> <a href="http://actionherojs.com/">actionHero.js</a></li>
+              <li><i class="icon-check"></i> <a href="http://frisbyjs.com/">Frisby</a></li>
+              <li><i class="icon-check"></i> <a href="http://mcavage.github.io/node-restify/">restify</a></li>
+              <li><i class="icon-check"></i> <a href="https://github.com/keithnlarsen/restmvc.js">restmvc</a></li>              
+            </ul> 
+        </div>
+      </div> 
+      <hr/>
+      <div id="others" class="page color-4">
+          <div class="inner-page">
+            <h2 class="page-headline">Others</h2>
+          </div>
+        <div class="row-fluid inner-page">
+          <div class="span12">
+            <p class="lead">Middleware, libraries and static site generators.</p>
+            <ul class="list-wide">
+              <li><i class="icon-check"></i> <a href="http://www.senchalabs.org/connect/">Connect</a></li>
+              <li><i class="icon-check"></i> <a href="https://github.com/robtweed/ewdGateway2">ewdGateway2</a></li>
+              <li><i class="icon-check"></i> <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></li>
+              <li><i class="icon-check"></i> <a href="http://http://docpad.org">docpad</a></li>
+              <li><i class="icon-check"></i> <a href="http://blacksmith.jit.su/">Blacksmith</a></li>
+              <li><i class="icon-check"></i> <a href="https://github.com/felixge/node-romulus">romulus</a></li>
+              <li><i class="icon-check"></i> <a href="https://github.com/caolan/petrify">Petrify</a></li>              
+            </ul> 
+                  <hr/>
+            <p>Similar threads on <a href="http://webapplog.com/node-js-frameworks/">webapplog</a>, <a href="https://www.quora.com/Node-js/Which-Node-js-framework-is-best-for-building-a-RESTful-API">Quora</a> and <a href="http://stackoverflow.com/questions/9762453/node-js-frameworks/17514847">StackOverflow</a>.</p>
+
+        </div>
+      </div> 
+
+      <!-- Newsletter -->
+      <div class="newsletter color-1">
+        <div class="inner-page row-fluid">
+          <div class="span4">
+            <h4><strong>Ship code</strong> that matters and subscribe to get the latest news</h4>
+          </div>
+          <div class="span6">
+            <input type="email" placeholder="your@e-mail.com" name="EMAIL" class="subscribe">
+          </div>
+          <div class="span2">
+            <button type="submit"  class="btn pull-right subscribe">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+<!--       <div id="contact" class="page color-2">
+        <div class="inner-page">
+          <h2 class="page-headline">Get in touch and say Hi!</h2>
+        </div>
+        <div class="row-fluid inner-page contact">
+          <div class="span6">
+            <h3>A new Node.js framework?</h3>
+            <textarea rows="6" placeholder="Framework description and links."></textarea>
+            <input type="text" placeholder="your@e-mail.com"><br />
+            <input type="text" placeholder="Name"><br />
+            <button class="btn btn-centered">Send it!</button>
+          </div>
+
+        </div>
+      </div> -->
+
+      <!-- The footer, social media icons, and copyright -->        
+      <footer class="page color-5">
+        <div class="inner-page row-fluid">
+          <div class="span6 social">
+            <a href="http://twitter.com/azat_co"><i class="icon-twitter"></i></a>
+            <a href="http://github.com/azat-co"><i class="icon-github-sign"></i></a>    
+            <a href="http://facebook.com/azat.mardanov"><i class="icon-facebook-sign"></i></a>
+            <a href="https://plus.google.com/116816240985852388027/about"><i class="icon-google-plus-sign"></i></a>
+          </div>
+          <div class="span6 text-right copyright">
+            &copy; 2013 <a  href="http://azat.co"  title="twitter bootstrap themes">Azat Mardanov</a> | <a href="index.html#home"   title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
+          </div>
+        </div>
+      </footer>
+
+  </body>
+</html>
