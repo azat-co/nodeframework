@@ -1170,3 +1170,6 @@ html{overflow-x:hidden;}
 ::-moz-selection{background:#000000;color:#ffffff;}
 .centered{margin:0 auto;display:block;}
 .border{border:1px solid #3a9ac4;}
+.btn-danger:hover {
+  background-color: #B12F29;
+}
