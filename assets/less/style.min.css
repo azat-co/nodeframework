@@ -1173,3 +1173,9 @@ html{overflow-x:hidden;}
 .btn-danger:hover {
   background-color: #B12F29;
 }
+
+.list-wide li iframe {
+  position: relative;
+  top: 5px;
+}
+}

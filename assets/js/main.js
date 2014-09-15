@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('[rel=tooltip]').tooltip();
 
 // Add spin.js to lazy load container
 
@@ -21,12 +22,12 @@ var navigation = responsiveNav("#nav", {
   }
 });
 
-// Lazy loading. 
-$("img.lazy").lazyload({ 
+// Lazy loading.
+$("img.lazy").lazyload({
   // The image starts loading 200 px before it is in viewport
    threshold : 200,
-   // Remove the line if you don`t need fade effect. 
-   effect : "fadeIn", 
+   // Remove the line if you don`t need fade effect.
+   effect : "fadeIn",
    // Change this for fade in speed
     effectspeed: 600,
    //  Hide spinner when loaded
@@ -38,7 +39,7 @@ $("img.lazy").lazyload({
   var $spy = $(this).scrollspy('refresh')
 });
       }
-}); 
+});
 
 
 // Lightbox
@@ -65,7 +66,7 @@ tLoading: 'Loading',
     close: function() {
      $('.navbar').fadeIn('slow');
     }
-	
+
   }
 
 });
@@ -107,7 +108,7 @@ $(' .iframe').magnificPopup({
 });
 
 // .scroll class for link scrolling.
- 
+
 $('.collapse').on('show', function(){
     $(this).parent().find(".icon-plus").removeClass("icon-plus").addClass("icon-minus");
     $(this).parent().find(".accordion-heading").addClass("active");
@@ -136,7 +137,7 @@ var jRes = jRespond([
 jRes.addFunc({
     breakpoint: 'mobile',
     enter: function() {
-    $('h1').fadeOut('slow');          
+    $('h1').fadeOut('slow');
     },
     exit: function() {
   $('h1').fadeIn('slow');
