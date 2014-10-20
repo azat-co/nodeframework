@@ -12,4 +12,4 @@ Hand-picked registry of Node.js frameworks.
 5. Submit a pull request :D
 
 ## License
-[MIT License](https://github.com/aza-co/nodeframework/blob/master/LICENSE) © Azat-co
+[MIT License](https://github.com/aza-co/nodeframework/blob/master/LICENSE) © Azat Mardan
