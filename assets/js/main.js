@@ -1,4 +1,42 @@
 $(document).ready(function() {
+  // Check if `projects.js` was loaded before this file.
+  // `projects` is defined in `projects.js`.
+  if (typeof projects !== 'undefined') {
+    // Loop over each project
+    projects.forEach(function (project) {
+      if (project.hasOwnProperty('tags')) {
+        // Project has tag(s), so add to every list that matches the tag.
+        project.tags.forEach(function (tag) {
+          addProjectToProjectList(tag, project);
+        });
+      } else {
+        // The project doesn't have any tags, so add it to the "other" section.
+        addProjectToProjectList('other', project);
+      }
+    });
+  } else {
+    // `projects.js` needs to be loaded before this file
+    console.error('Please load `projects.js` before `main.js`!');
+  }
+
+  function addProjectToProjectList(tag, project) {
+    var element = '';
+
+    element += '<li>';
+    element +=   '<i class="icon-check"></i> <a href="' + project.homepage + '">' + project.name + '</a> ';
+    if (project.annotation) { element += '(' + project.annotation + ') '; }
+    element +=   '<iframe src="http://ghbtns.com/github-btn.html?user=' + project.github.user + '&repo=' + project.github.repo + '&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>';
+    element +=   '<a data-toggle="collapse" data-parent="#mvc" href="#project-link-container_' + project.github.user + '__' + project.github.repo + '">';
+    element +=     '<i class="icon-info icon-stack-1x icon-inverse"></i>';
+    element +=   '</a>';
+    element +=   '<div id="project-link-container_' + project.github.user + '__' + project.github.repo + '" class="panel-collapse collapse">';
+    project.links.forEach(function (link) { element += '[<a href="' + link.url + '">' + link.title + '</a>]&nbsp;'; });
+    element +=   '</div>';
+    element += '</li>';
+
+    return $('#project-list-' + tag).append(element);
+  }
+
   $('[rel=tooltip]').tooltip();
 
 // Add spin.js to lazy load container
